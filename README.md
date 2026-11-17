@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CEG website
 
-## Getting Started
+Website for the Centre for Economic Growth, built with Next.js (JavaScript) and plain CSS.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things live
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+| Folder | What it holds |
+|---|---|
+| `content/` | All text and data: site details, menu, About copy, research areas, people, publications, events, images. **Edit content here.** |
+| `lib/content.js` | The content layer. Pages get everything through these functions. To connect a CMS later, change only this file. |
+| `app/` | One folder per page (`about`, `research`, `publications`, `people`, `events`, `contact`, `work-with-us`). |
+| `components/` | Reusable pieces: header, footer, cards, lists, forms. |
+| `styles/` | Plain CSS. `tokens.css` holds every colour, font and spacing value. |
+| `public/images/` | Photo files. |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Common changes
 
-## Learn More
+- **Change a colour or font:** `styles/tokens.css`.
+- **Change the menu:** `content/navigation.js`.
+- **Add a publication, event or person:** add an entry to the matching file in `content/`. The pages and links are created automatically.
+- **Replace a photo:** put the file in `public/images/` and update its entry in `content/images.js`. Remove the `credit` field for CEG's own photos.
+- **Add a team photo:** add the image to `content/images.js` and set `photo` on the person in `content/people.js`.
+- **Swap in the real logo:** `components/Logo.js`.
 
-To learn more about Next.js, take a look at the following resources:
+## Still placeholder
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- All publications and events (`content/publications.js`, `content/events.js`).
+- Contact details and social links (`content/site.js`).
+- "Work with us" copy (`app/work-with-us/page.js`).
+- All photos are stand-ins from Wikimedia Commons, credited on `/credits`.
+- The contact form is not connected: set `endpoint` in `components/ContactForm.js`.
+- The language selector offers English only.

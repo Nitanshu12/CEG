@@ -1,0 +1,65 @@
+/* DESIGN TOKENS
+ * The single place for colours, fonts, sizes and spacing. Every other
+ * stylesheet uses these variables, so a brand change is made here only.
+ * Colours: see the colour block below and styles/palettes.css. */
+
+:root {
+  color-scheme: light;
+
+  /* Colour. This is the default palette (navy and teal). Other palettes
+   * are in styles/palettes.css; pick one with PALETTE in app/layout.js. */
+  --color-paper: #FAFCFE;           /* page background */
+  --color-paper-2: #F0F4F8;         /* soft bands and panels */
+  --color-paper-3: #E0E7EE;         /* image loading wash, portrait tiles */
+  --color-ink: #0C2140;             /* main brand colour: headings, top bar, navy bands, footer */
+  --color-ink-2: #25364F;           /* body text */
+  --color-muted: #4D5969;           /* captions, dates, labels */
+  --color-rule: #D5DBE3;            /* thin dividing lines */
+  --color-rule-2: #1A2E4C;          /* firm lines under headings */
+  --color-accent: #007176;          /* buttons, active tabs, link underlines */
+  --color-accent-2: #00595D;        /* button hover; type labels such as "Brief" */
+  --color-accent-ink: #F6FBFB;      /* text on accent buttons */
+  --color-on-ink: #F6F9FB;          /* headings on the brand colour */
+  --color-on-ink-muted: #BBC5D1;    /* body text on the brand colour */
+  --color-on-ink-rule: #374863;     /* lines on the brand colour */
+  --color-on-ink-accent: #72D0D0;   /* accent text on the brand colour */
+  --color-highlight: #C9A567;       /* thin gold-style rules, used sparingly */
+  --color-focus: var(--color-accent);
+
+  --color-error: oklch(52% 0.19 27);
+  --color-success: oklch(50% 0.12 150);
+
+  /* Type: the font variables are set by next/font in app/layout.js */
+  --font-display: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-newsreader), ui-serif, Georgia, serif;
+  --tracking-display: -0.02em;
+  --display-weight: 600;
+
+  --text-xs: 0.8125rem; --text-sm: 0.9375rem; --text-md: 1.0625rem; --text-lg: 1.25rem;
+  --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
+  --text-display: clamp(2.75rem, 4.2vw + 1rem, 4.75rem);
+  --text-display-s: clamp(2.25rem, 3vw + 1rem, 3.5rem);
+  --text-section: clamp(1.875rem, 2vw + 1rem, 3rem);
+  --text-title: clamp(1.25rem, 0.6vw + 1rem, 1.5rem);
+  --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+
+  /* Spacing scale */
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px;
+  --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+
+  /* Layout */
+  --container: 1360px; --gutter: 64px; --gap-columns: 32px;
+  --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
+  --topbar-height: 40px; --header-height: 76px;
+
+  /* Surfaces */
+  --radius-card: 0; --radius-pill: 2px; --rule-hair: 1px; --rule-bar: 2px;
+  --shadow-pop: 0 16px 40px color-mix(in oklab, var(--color-ink) 14%, transparent);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+
+  /* Layers */
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500;
+}

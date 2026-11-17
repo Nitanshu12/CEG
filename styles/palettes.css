@@ -1,0 +1,235 @@
+/* COLOUR PALETTES
+ *
+ * The default palette (navy and teal) lives in styles/tokens.css.
+ * Each block below overrides it when chosen. To switch palette, change
+ * PALETTE at the top of app/layout.js to one of these names:
+ *
+ *   navy-teal     the default (styles/tokens.css)
+ *   deep-teal     Deep teal: teal as the brand colour, sand highlight. Calm and minimal.
+ *   navy-bronze   Navy and bronze: warm off-white paper, bronze buttons. Classic and established.
+ *   navy-saffron  Navy and saffron: deep saffron buttons, amber highlight. India-centred and confident.
+ *   navy-crimson  Navy and crimson: crimson buttons, gold highlight. Traditional policy institute.
+ *
+ *   Palettes with a brand colour other than navy:
+ *   graphite-amber Graphite and amber: near-black charcoal, amber buttons. Sharp and modern.
+ *   forest-gold    Forest green and gold: deep green, old-gold buttons. Growth and stability.
+ *   burgundy-teal  Burgundy and teal: deep wine red, teal buttons. Distinguished and academic.
+ *   aubergine-teal Aubergine and teal: deep plum, teal buttons. Distinctive and contemporary.
+ *   espresso-teal  Espresso and teal: dark brown, teal buttons, warm paper. Warm and grounded.
+ *   olive-rust     Olive and rust: dark olive, rust buttons. Earthy, sustainability-minded.
+ *
+ * To fine-tune a colour, edit its value in the block for the palette in
+ * use. Any CSS colour works: #0B3B3E, rgb(...), hsl(...). Keep text
+ * readable: dark text on light colours, light text on dark ones. */
+
+/* Deep teal: teal as the brand colour, sand highlight. Calm and minimal. */
+:root[data-palette="deep-teal"] {
+  --color-paper: #FAFCFC;           /* page background */
+  --color-paper-2: #EFF5F5;         /* soft bands and panels */
+  --color-paper-3: #DDE9E9;         /* image loading wash, portrait tiles */
+  --color-ink: #0B3B3E;             /* main brand colour: headings, top bar, navy bands, footer */
+  --color-ink-2: #1D4A4D;           /* body text */
+  --color-muted: #4A6668;           /* captions, dates, labels */
+  --color-rule: #D6E2E2;            /* thin dividing lines */
+  --color-rule-2: #134347;          /* firm lines under headings */
+  --color-accent: #0E7472;          /* buttons, active tabs, link underlines */
+  --color-accent-2: #0A5A58;        /* button hover; type labels such as "Brief" */
+  --color-accent-ink: #F7FCFC;      /* text on accent buttons */
+  --color-on-ink: #F4FAFA;          /* headings on the brand colour */
+  --color-on-ink-muted: #C2D6D6;    /* body text on the brand colour */
+  --color-on-ink-rule: #2B5A5D;     /* lines on the brand colour */
+  --color-on-ink-accent: #8FD3CC;   /* accent text on the brand colour */
+  --color-highlight: #D4B06A;       /* thin gold-style rules, used sparingly */
+  --color-focus: var(--color-accent);
+}
+
+/* Navy and bronze: warm off-white paper, bronze buttons. Classic and established. */
+:root[data-palette="navy-bronze"] {
+  --color-paper: #FCFBF8;           /* page background */
+  --color-paper-2: #F5F2EC;         /* soft bands and panels */
+  --color-paper-3: #E8E2D6;         /* image loading wash, portrait tiles */
+  --color-ink: #14233F;             /* main brand colour: headings, top bar, navy bands, footer */
+  --color-ink-2: #27344D;           /* body text */
+  --color-muted: #5A5F6B;           /* captions, dates, labels */
+  --color-rule: #E3DED3;            /* thin dividing lines */
+  --color-rule-2: #1C2B48;          /* firm lines under headings */
+  --color-accent: #8C6A2F;          /* buttons, active tabs, link underlines */
+  --color-accent-2: #6E5224;        /* button hover; type labels such as "Brief" */
+  --color-accent-ink: #FFFDF8;      /* text on accent buttons */
+  --color-on-ink: #F8F6F1;          /* headings on the brand colour */
+  --color-on-ink-muted: #C9CDD6;    /* body text on the brand colour */
+  --color-on-ink-rule: #34436A;     /* lines on the brand colour */
+  --color-on-ink-accent: #D9B877;   /* accent text on the brand colour */
+  --color-highlight: #C8A35A;       /* thin gold-style rules, used sparingly */
+  --color-focus: var(--color-accent);
+}
+
+/* Navy and saffron: deep saffron buttons, amber highlight. India-centred and confident. */
+:root[data-palette="navy-saffron"] {
+  --color-paper: #FBFCFD;           /* page background */
+  --color-paper-2: #F2F4F8;         /* soft bands and panels */
+  --color-paper-3: #E1E6EF;         /* image loading wash, portrait tiles */
+  --color-ink: #122A4D;             /* main brand colour: headings, top bar, navy bands, footer */
+  --color-ink-2: #22385A;           /* body text */
+  --color-muted: #4F5D72;           /* captions, dates, labels */
+  --color-rule: #DEE3EB;            /* thin dividing lines */
+  --color-rule-2: #18325A;          /* firm lines under headings */
+  --color-accent: #B4530E;          /* buttons, active tabs, link underlines */
+  --color-accent-2: #924209;        /* button hover; type labels such as "Brief" */
+  --color-accent-ink: #FFFAF5;      /* text on accent buttons */
+  --color-on-ink: #F7F9FC;          /* headings on the brand colour */
+  --color-on-ink-muted: #C6CFDC;    /* body text on the brand colour */
+  --color-on-ink-rule: #2F4870;     /* lines on the brand colour */
+  --color-on-ink-accent: #F5A55C;   /* accent text on the brand colour */
+  --color-highlight: #E9A23B;       /* thin gold-style rules, used sparingly */
+  --color-focus: var(--color-accent);
+}
+
+/* Navy and crimson: crimson buttons, gold highlight. Traditional policy institute. */
+:root[data-palette="navy-crimson"] {
+  --color-paper: #FCFCFD;           /* page background */
+  --color-paper-2: #F3F4F7;         /* soft bands and panels */
+  --color-paper-3: #E3E6EC;         /* image loading wash, portrait tiles */
+  --color-ink: #16213B;             /* main brand colour: headings, top bar, navy bands, footer */
+  --color-ink-2: #283350;           /* body text */
+  --color-muted: #565E70;           /* captions, dates, labels */
+  --color-rule: #E0E3E9;            /* thin dividing lines */
+  --color-rule-2: #1C2846;          /* firm lines under headings */
+  --color-accent: #960018;          /* buttons, active tabs, link underlines */
+  --color-accent-2: #960018;        /* button hover; type labels such as "Brief" */
+  --color-accent-ink: #FFF8F9;      /* text on accent buttons */
+  --color-on-ink: #F8F9FB;          /* headings on the brand colour */
+  --color-on-ink-muted: #C8CDD8;    /* body text on the brand colour */
+  --color-on-ink-rule: #323E5E;     /* lines on the brand colour */
+  --color-on-ink-accent: #EBA9B4;   /* accent text on the brand colour */
+  --color-highlight: #C9A45C;       /* thin gold-style rules, used sparingly */
+  --color-focus: var(--color-accent);
+}
+
+/* ---------- Palettes with a brand colour other than navy ---------- */
+
+/* Graphite and amber: near-black charcoal, amber buttons. Sharp and modern. */
+:root[data-palette="graphite-amber"] {
+  --color-paper: #FBFBFA;           /* page background */
+  --color-paper-2: #F2F2F0;         /* soft bands and panels */
+  --color-paper-3: #E3E3E0;         /* image loading wash, portrait tiles */
+  --color-ink: #1E2227;             /* main brand colour: headings, top bar, navy bands, footer */
+  --color-ink-2: #30353C;           /* body text */
+  --color-muted: #5A5F66;           /* captions, dates, labels */
+  --color-rule: #DEDEDA;            /* thin dividing lines */
+  --color-rule-2: #262A30;          /* firm lines under headings */
+  --color-accent: #9A5410;          /* buttons, active tabs, link underlines */
+  --color-accent-2: #7A420C;        /* button hover; type labels such as "Brief" */
+  --color-accent-ink: #FFFAF4;      /* text on accent buttons */
+  --color-on-ink: #F7F7F5;          /* headings on the brand colour */
+  --color-on-ink-muted: #C4C7CC;    /* body text on the brand colour */
+  --color-on-ink-rule: #3A4048;     /* lines on the brand colour */
+  --color-on-ink-accent: #F0B26B;   /* accent text on the brand colour */
+  --color-highlight: #D9A04A;       /* thin gold-style rules, used sparingly */
+  --color-focus: var(--color-accent);
+}
+
+/* Forest green and gold: deep green, old-gold buttons. Growth and stability. */
+:root[data-palette="forest-gold"] {
+  --color-paper: #FBFCFA;           /* page background */
+  --color-paper-2: #F0F4EF;         /* soft bands and panels */
+  --color-paper-3: #DFE8DD;         /* image loading wash, portrait tiles */
+  --color-ink: #143528;             /* main brand colour: headings, top bar, navy bands, footer */
+  --color-ink-2: #24453A;           /* body text */
+  --color-muted: #4E6359;           /* captions, dates, labels */
+  --color-rule: #D9E2D6;            /* thin dividing lines */
+  --color-rule-2: #1A3D30;          /* firm lines under headings */
+  --color-accent: #7F5E1F;          /* buttons, active tabs, link underlines */
+  --color-accent-2: #654A18;        /* button hover; type labels such as "Brief" */
+  --color-accent-ink: #FFFCF4;      /* text on accent buttons */
+  --color-on-ink: #F5F9F6;          /* headings on the brand colour */
+  --color-on-ink-muted: #BFD0C6;    /* body text on the brand colour */
+  --color-on-ink-rule: #2E5244;     /* lines on the brand colour */
+  --color-on-ink-accent: #E3C27A;   /* accent text on the brand colour */
+  --color-highlight: #C9A452;       /* thin gold-style rules, used sparingly */
+  --color-focus: var(--color-accent);
+}
+
+/* Burgundy and teal: deep wine red, teal buttons. Distinguished and academic. */
+:root[data-palette="burgundy-teal"] {
+  --color-paper: #FDFBFB;           /* page background */
+  --color-paper-2: #F6F1F1;         /* soft bands and panels */
+  --color-paper-3: #EADFE0;         /* image loading wash, portrait tiles */
+  --color-ink: #4A1526;             /* main brand colour: headings, top bar, navy bands, footer */
+  --color-ink-2: #4A2A33;           /* body text */
+  --color-muted: #6B5A5F;           /* captions, dates, labels */
+  --color-rule: #E6DCDD;            /* thin dividing lines */
+  --color-rule-2: #4A1526;          /* firm lines under headings */
+  --color-accent: #0E6B69;          /* buttons, active tabs, link underlines */
+  --color-accent-2: #0A5452;        /* button hover; type labels such as "Brief" */
+  --color-accent-ink: #F5FBFB;      /* text on accent buttons */
+  --color-on-ink: #FBF5F6;          /* headings on the brand colour */
+  --color-on-ink-muted: #DDC3CA;    /* body text on the brand colour */
+  --color-on-ink-rule: #6B3346;     /* lines on the brand colour */
+  --color-on-ink-accent: #8FD8D2;   /* accent text on the brand colour */
+  --color-highlight: #D2A85E;       /* thin gold-style rules, used sparingly */
+  --color-focus: var(--color-accent);
+}
+
+/* Aubergine and teal: deep plum, teal buttons. Distinctive and contemporary. */
+:root[data-palette="aubergine-teal"] {
+  --color-paper: #FCFBFD;           /* page background */
+  --color-paper-2: #F4F1F7;         /* soft bands and panels */
+  --color-paper-3: #E5DFEC;         /* image loading wash, portrait tiles */
+  --color-ink: #2D1B3E;             /* main brand colour: headings, top bar, navy bands, footer */
+  --color-ink-2: #3B2E4A;           /* body text */
+  --color-muted: #5F5669;           /* captions, dates, labels */
+  --color-rule: #E2DDE8;            /* thin dividing lines */
+  --color-rule-2: #2D1B3E;          /* firm lines under headings */
+  --color-accent: #0D6E6A;          /* buttons, active tabs, link underlines */
+  --color-accent-2: #0A5653;        /* button hover; type labels such as "Brief" */
+  --color-accent-ink: #F5FBFB;      /* text on accent buttons */
+  --color-on-ink: #F8F5FB;          /* headings on the brand colour */
+  --color-on-ink-muted: #CFC4DB;    /* body text on the brand colour */
+  --color-on-ink-rule: #4A3760;     /* lines on the brand colour */
+  --color-on-ink-accent: #93D9D1;   /* accent text on the brand colour */
+  --color-highlight: #D4AE63;       /* thin gold-style rules, used sparingly */
+  --color-focus: var(--color-accent);
+}
+
+/* Espresso and teal: dark brown, teal buttons, warm paper. Warm and grounded. */
+:root[data-palette="espresso-teal"] {
+  --color-paper: #FCFBF9;           /* page background */
+  --color-paper-2: #F5F1EC;         /* soft bands and panels */
+  --color-paper-3: #E8E0D6;         /* image loading wash, portrait tiles */
+  --color-ink: #33231A;             /* main brand colour: headings, top bar, navy bands, footer */
+  --color-ink-2: #43342B;           /* body text */
+  --color-muted: #665A51;           /* captions, dates, labels */
+  --color-rule: #E4DDD4;            /* thin dividing lines */
+  --color-rule-2: #33231A;          /* firm lines under headings */
+  --color-accent: #16696A;          /* buttons, active tabs, link underlines */
+  --color-accent-2: #105253;        /* button hover; type labels such as "Brief" */
+  --color-accent-ink: #F5FBFB;      /* text on accent buttons */
+  --color-on-ink: #FAF6F2;          /* headings on the brand colour */
+  --color-on-ink-muted: #D6C8BC;    /* body text on the brand colour */
+  --color-on-ink-rule: #55423A;     /* lines on the brand colour */
+  --color-on-ink-accent: #94D3CC;   /* accent text on the brand colour */
+  --color-highlight: #D2A65A;       /* thin gold-style rules, used sparingly */
+  --color-focus: var(--color-accent);
+}
+
+/* Olive and rust: dark olive, rust buttons. Earthy, sustainability-minded. */
+:root[data-palette="olive-rust"] {
+  --color-paper: #FBFBF8;           /* page background */
+  --color-paper-2: #F2F3EC;         /* soft bands and panels */
+  --color-paper-3: #E2E5D6;         /* image loading wash, portrait tiles */
+  --color-ink: #2B3420;             /* main brand colour: headings, top bar, navy bands, footer */
+  --color-ink-2: #3A4330;           /* body text */
+  --color-muted: #5D6452;           /* captions, dates, labels */
+  --color-rule: #DFE2D5;            /* thin dividing lines */
+  --color-rule-2: #2B3420;          /* firm lines under headings */
+  --color-accent: #9C4419;          /* buttons, active tabs, link underlines */
+  --color-accent-2: #7D3613;        /* button hover; type labels such as "Brief" */
+  --color-accent-ink: #FFF9F5;      /* text on accent buttons */
+  --color-on-ink: #F7F8F2;          /* headings on the brand colour */
+  --color-on-ink-muted: #CBD0BD;    /* body text on the brand colour */
+  --color-on-ink-rule: #46523A;     /* lines on the brand colour */
+  --color-on-ink-accent: #EDB38E;   /* accent text on the brand colour */
+  --color-highlight: #D2AA55;       /* thin gold-style rules, used sparingly */
+  --color-focus: var(--color-accent);
+}
